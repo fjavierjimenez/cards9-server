@@ -4,7 +4,7 @@ version := "0.1"
 
 lazy val cards9 = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.11.1"
+scalaVersion := "2.11.11"
 
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
 
