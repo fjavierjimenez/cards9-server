@@ -1,4 +1,6 @@
-﻿# --- !Ups
+﻿# --- Initial evolution
+
+# --- !Ups
 
 CREATE TABLE card_classes (
   id serial primary key,

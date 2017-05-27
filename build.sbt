@@ -2,21 +2,21 @@ name := """cards9-server"""
 
 version := "0.1"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val cards9 = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.11.1"
 
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
 
 routesGenerator := InjectedRoutesGenerator
 
 libraryDependencies ++= Seq(
-    "com.typesafe.play" %% "play-slick" % "2.0.0",
-    "com.typesafe.play" %% "play-slick-evolutions" % "2.0.0",
-    "org.postgresql" % "postgresql" % "9.4.+",
-    "org.scalatest" %% "scalatest" % "3.0.+" % "test",
-    "org.scalacheck" %% "scalacheck" % "1.13.+" % "test",
-    "com.beachape" %% "enumeratum" % "1.5.+"
+    "com.typesafe.play" %% "play-slick" % "2.1.0",
+    "com.typesafe.play" %% "play-slick-evolutions" % "2.1.0",
+    "org.postgresql" % "postgresql" % "42.1.1",
+    "org.scalatest" %% "scalatest" % "3.0.1" % "test",
+    "org.scalacheck" %% "scalacheck" % "1.13.4" % "test",
+    "com.beachape" %% "enumeratum" % "1.5.12"
 )
 
 fork in run := true
