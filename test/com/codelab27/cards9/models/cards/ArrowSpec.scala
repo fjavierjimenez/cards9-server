@@ -1,6 +1,6 @@
 package com.codelab27.cards9.models
 
-import ModelGens._
+import com.codelab27.cards9.models.ModelGens._
 import com.codelab27.cards9.models.cards.Arrow
 import com.codelab27.cards9.specs.ModelSpec
 
@@ -43,7 +43,7 @@ class ArrowSpec extends ModelSpec {
 
     "arrows are repeated and/or size is greater than MAX_ARROWS" should {
       "return no byte" in {
-        forAll(InvalidArrowsGenerator) { arrows: List[Arrow] =>
+        forAll(invalidArrowsGenerator) { arrows: List[Arrow] =>
           whenever(arrows.distinct.size != arrows.size || arrows.size > Arrow.MAX_ARROWS) {
             Arrow.compress(arrows) shouldEqual None
           }
